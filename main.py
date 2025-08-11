@@ -57,9 +57,11 @@ def predict_no_show_logic_interface(message: str) -> str:
 
 # Optional: CLI test run
 if __name__ == "__main__":
-    print("✅ Test Prediction Output:")
-    print(f"Patient: Age 20, SMS=0, Days=1 → Prediction:",
-    predictor.predict(17, 1, 1))
+    # Direct ML prediction without Ollama
+    age = int(input("Enter Age: "))
+    sms_reminder = int(input("SMS Reminder? (1 for Yes, 0 for No): "))
+    days_between = int(input("Days between scheduling and appointment: "))
 
-    # To run chat, uncomment below:
-    # user_proxy.initiate_chat(predictor_agent, message="Help me predict no-show for appointment.")
+    result = predictor.predict(age, sms_reminder, days_between)
+    print(f"✅ Prediction: {result}")
+

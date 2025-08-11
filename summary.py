@@ -21,6 +21,8 @@ Return only valid JSON with the following format:
   "other_notes": ""
 }
 
+- Go through the provided data and extract all the fields in the data.
+- Return each and every field present in the Data , Do not miss any field. 
 - Extract `duration` if the user mentions things like "for 2 weeks", "since last year", etc.
 - In `other_notes`, include medications, lifestyle habits, family history, recent diagnoses, or appointments.
 - If any field is missing in the input, leave it empty. Do not return explanations. Return only the JSON.
